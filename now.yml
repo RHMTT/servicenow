@@ -1,0 +1,57 @@
+plugin: servicenow.servicenow.now
+table: cmdb_ci_linux_server
+fields: [ip_address,fqdn,host_name,sys_class_name,name,os]
+keyed_groups:
+  - key: sn_sys_class_name | lower
+	prefix: ''
+	separator: ''
+  - key: sn_os | lower
+	prefix: ''
+	separator: ''
+  plugin: servicenow.itsm.now
+table: cmdb_ci_server
+enhanced: false
+strict: false
+instance:
+  timeout: 90.0
+
+#inventory_hostname_source: asset_tag
+
+compose:
+  ansible_host: fqdn
+  location: location
+  u_os_environment: u_os_environment
+  u_deployment_application_code: u_deployment_application_code
+  u_chassis_sub_type: u_chassis_sub_type
+  u_server_classification: u_server_classification
+  u_service_platform_tier: u_service_platform_tier
+  u_os_family: u_os_family
+  u_os_patching_team: u_os_patching_team
+  support_group: support_group
+  u_support_group_l2: u_support_group_l2
+  u_support_group_l3: u_support_group_l3
+  u_support_group_l4: u_support_group_l4
+  u_os_activation_date: u_os_activation_date
+  u_uuid: u_uuid
+  u_virtual_servre_technology: u_virtual_servre_technology
+  asset_status: asset.install_status
+
+columns:
+  - name
+  - classification
+  - cpu_type
+  - host_name
+  - fqdn
+  - ip_address
+  - serial_number
+  - os
+  - os_version
+
+query:
+  - os_version: STARTSWITH Red Hat Enterprise Server Release
+
+keyed_groups:
+  - key: os
+    prefix: os
+  - key: u_deployment_application_code
+    prefix: app_code
