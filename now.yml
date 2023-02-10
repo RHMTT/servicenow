@@ -2,3 +2,7 @@ plugin: servicenow.itsm.now
 table: cmdb_ci_server
 enhanced: false
 strict: false
+compose:
+  ansible_host: fqdn
+  location: location
+  u_os_environment: u_os_environment
