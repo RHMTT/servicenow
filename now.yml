@@ -1,6 +1,7 @@
 plugin: servicenow.itsm.now
 table: cmdb_ci_server
 enhanced: true
+use_extra_vars: true
 strict: false
 instance:
   timeout: 90.0
