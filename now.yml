@@ -6,3 +6,9 @@ compose:
   ansible_host: fqdn
   location: location
   u_os_environment: u_os_environment
+grouped_by:
+  manufacturer:
+  os:
+    includes:
+      - Linux Red Hat
+      - Windows XP
