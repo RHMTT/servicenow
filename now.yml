@@ -5,13 +5,3 @@ use_extra_vars: true
 strict: false
 instance:
   timeout: 90.0
-columns:
-  - name
-  - classification
-  - cpu_type
-  - host_name
-  - fqdn
-  - ip_address
-  - serial_number
-  - os
-  - os_version
