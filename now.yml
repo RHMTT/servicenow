@@ -1,7 +1,7 @@
 ---
 plugin: servicenow.itsm.now
 instance:
-  host: "{{SN_HOST}}"
-  username: "{{SN_USERNAME }}"
-  password: "{{SN_PASSWORD}}"
+  host: "{{host}}"
+  username: "{{sn_user}}"
+  password: "{{sn_pass}}"
 columns: [name,serial_number,fqdn,ip_address,os,os_version,support_group.name,location,location.name]
