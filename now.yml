@@ -1,6 +1,4 @@
 plugin: servicenow.itsm.now
-
-columns:
-  - name
-  - classification
-  - cpu_type
+keyed_groups:
+  - key: manufacturer
+    separator: ""
