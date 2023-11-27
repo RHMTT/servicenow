@@ -1,2 +1,7 @@
 ---
 plugin: servicenow.itsm.now
+
+columns:
+  - name
+  - classification
+  - cpu_type
