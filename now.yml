@@ -1,3 +1,2 @@
 ---
 plugin: servicenow.itsm.now
-columns: [name,serial_number,fqdn,ip_address,os,os_version,support_group.name,location,location.name]
